@@ -21,7 +21,7 @@ No GPU provisioning, inference, capacity booking, prices, customer accounts, cre
 
 ## Local CLI use
 
-With Node.js 22 or newer, run `node javascript/cli.mjs --help` or `node javascript/cli.mjs fixtures`. With Python 3.10 or newer, follow python/README.md. Neither client is represented as published on npm or PyPI until actual registry publication is verified.
+With Node.js 22 or newer, run `node javascript/cli.mjs --help` or `node javascript/cli.mjs fixtures`. With Python 3.10 or newer, follow python/README.md. The JavaScript SDK and CLI are published as `aguasto-research@1.0.0` on npm. Install with `npm install aguasto-research@1.0.0`. The Python client remains a source download; no PyPI publication is claimed.
 
 ## Homebrew
 
