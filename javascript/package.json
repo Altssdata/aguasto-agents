@@ -5,6 +5,7 @@
   "description": "Official Aguasto public research and educational calculator client; source distribution, not published to npm.",
   "type": "module",
   "homepage": "https://www.aguasto.com/developers",
+  "repository": { "type": "git", "url": "https://github.com/Altssdata/aguasto-agents.git", "directory": "javascript" },
   "author": "Aguasto",
   "license": "UNLICENSED",
   "engines": { "node": ">=22" },

@@ -1,6 +1,6 @@
 # Aguasto research client
 
-Official source download from https://www.aguasto.com/developers. This package is not published to npm. No public repository is advertised; the private corporate source repository is not a public integration dependency.
+Official source download from https://www.aguasto.com/developers and standalone integration source at https://github.com/Altssdata/aguasto-agents. This package is not published to npm. The private corporate source repository is not a public integration dependency.
 
 Install the downloaded archive with `npm install ./aguasto-research-js.tgz`, then use:
 
