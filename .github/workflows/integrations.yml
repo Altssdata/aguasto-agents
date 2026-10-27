@@ -1,0 +1,35 @@
+name: Public integrations
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  clients:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: "24"
+      - run: node javascript/cli.mjs fixtures
+      - run: PYTHONPATH=python python3 -m aguasto_research fixtures
+      - name: Go SDK unit and live API tests
+        working-directory: go
+        env:
+          AGUASTO_LIVE_TEST: "1"
+        run: |
+          go test ./...
+          go vet ./...
+          go run ./cmd/aguasto-research fixtures
+  homebrew:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - run: ruby -c Formula/aguasto-research.rb
+      - run: brew install --formula ./Formula/aguasto-research.rb
+      - run: brew test aguasto-research
+      - run: aguasto-research --help
