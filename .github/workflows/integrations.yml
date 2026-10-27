@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: "24"
@@ -29,7 +31,13 @@ jobs:
       HOMEBREW_NO_AUTO_UPDATE: "1"
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
       - run: ruby -c Formula/aguasto-research.rb
-      - run: brew install --formula ./Formula/aguasto-research.rb
-      - run: brew test aguasto-research
+      - run: |
+          brew tap altssdata/aguasto-agents https://github.com/Altssdata/aguasto-agents
+          mkdir -p "$(brew --repo altssdata/aguasto-agents)/Formula"
+          cp Formula/aguasto-research.rb "$(brew --repo altssdata/aguasto-agents)/Formula/aguasto-research.rb"
+          brew install altssdata/aguasto-agents/aguasto-research
+      - run: brew test altssdata/aguasto-agents/aguasto-research
       - run: aguasto-research --help

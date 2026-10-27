@@ -11,7 +11,8 @@ class AguastoResearch < Formula
   depends_on "node"
 
   def install
-    libexec.install Dir["*"]
+    source = (buildpath/"package/cli.mjs").exist? ? buildpath/"package" : buildpath
+    libexec.install source.children
     chmod 0755, libexec/"cli.mjs"
     bin.write_exec_script libexec/"cli.mjs"
   end
