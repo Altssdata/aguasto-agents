@@ -21,7 +21,7 @@ No GPU provisioning, inference, capacity booking, prices, customer accounts, cre
 
 ## Local CLI use
 
-With Node.js 22 or newer, run `node javascript/cli.mjs --help` or `node javascript/cli.mjs fixtures`. With Python 3.10 or newer, follow python/README.md. The JavaScript SDK and CLI are published as `aguasto-research@1.0.0` on npm. Install with `npm install aguasto-research@1.0.0`. The Python client remains a source download; no PyPI publication is claimed.
+With Node.js 22 or newer, run `node javascript/cli.mjs --help` or `node javascript/cli.mjs fixtures`. With Python 3.10 or newer, follow python/README.md. The JavaScript SDK and CLI are published as `aguasto-research@1.0.0` on npm. Install with `npm install aguasto-research@1.0.0`. The Python client is published on [PyPI](https://pypi.org/project/aguasto-research/); install with `python -m pip install aguasto-research` in your virtual environment.
 
 ## Agent skills
 
@@ -30,6 +30,8 @@ Install the reviewed research and calculation skills with:
 `npx skills add Altssdata/aguasto-agents --skill aguasto-research aguasto-calculations`
 
 Public directory pages: [research](https://skills.sh/altssdata/aguasto-agents/aguasto-research) and [calculations](https://skills.sh/altssdata/aguasto-agents/aguasto-calculations). An installation test verifies compatibility; it is not a claim of organic adoption or endorsement.
+
+For synthetic fixture searches and expected-error checks, install `npx skills add Altssdata/aguasto-agents --skill aguasto-integration-testing`. See the [integration testing skill](https://skills.sh/altssdata/aguasto-agents/aguasto-integration-testing) and [sandbox guide](https://www.aguasto.com/sandbox).
 
 ## Homebrew
 

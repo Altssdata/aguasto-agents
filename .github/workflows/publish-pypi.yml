@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          ref: python/v1.0.0
+          ref: python/v1.0.1
           persist-credentials: false
       - name: Validate the release source
         run: |
-          test "$(git describe --tags --exact-match)" = "python/v1.0.0"
+          test "$(git describe --tags --exact-match)" = "python/v1.0.1"
           PYTHONPATH=python python3 -m aguasto_research fixtures
       - name: Build and validate distributions
         run: |
@@ -22,7 +22,7 @@ jobs:
           python3 -m twine check --strict dist/*
           python3 -m pip install --no-deps dist/*.whl
           aguasto-research fixtures
-          python3 -c "import importlib.metadata as m; assert m.version('aguasto-research') == '1.0.0'"
+          python3 -c "import importlib.metadata as m; assert m.version('aguasto-research') == '1.0.1'"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: aguasto-python-distributions
