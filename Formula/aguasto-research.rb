@@ -14,7 +14,10 @@ class AguastoResearch < Formula
     source = (buildpath/"package/cli.mjs").exist? ? buildpath/"package" : buildpath
     libexec.install source.children
     chmod 0755, libexec/"cli.mjs"
-    bin.write_exec_script libexec/"cli.mjs"
+    (bin/"aguasto-research").write <<~SH
+      #!/bin/sh
+      exec "#{Formula["node"].opt_bin}/node" "#{libexec}/cli.mjs" "$@"
+    SH
   end
 
   test do
