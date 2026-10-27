@@ -23,6 +23,14 @@ No GPU provisioning, inference, capacity booking, prices, customer accounts, cre
 
 With Node.js 22 or newer, run `node javascript/cli.mjs --help` or `node javascript/cli.mjs fixtures`. With Python 3.10 or newer, follow python/README.md. The JavaScript SDK and CLI are published as `aguasto-research@1.0.0` on npm. Install with `npm install aguasto-research@1.0.0`. The Python client remains a source download; no PyPI publication is claimed.
 
+## Agent skills
+
+Install the reviewed research and calculation skills with:
+
+`npx skills add Altssdata/aguasto-agents --skill aguasto-research aguasto-calculations`
+
+Public directory pages: [research](https://skills.sh/altssdata/aguasto-agents/aguasto-research) and [calculations](https://skills.sh/altssdata/aguasto-agents/aguasto-calculations). An installation test verifies compatibility; it is not a claim of organic adoption or endorsement.
+
 ## Homebrew
 
 `brew tap altssdata/aguasto-agents https://github.com/Altssdata/aguasto-agents`
