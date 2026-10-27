@@ -1,15 +1,33 @@
 {
   "name": "aguasto-research",
   "version": "1.0.0",
-  "private": true,
-  "description": "Official Aguasto public research and educational calculator client; source distribution, not published to npm.",
+  "description": "Official Aguasto public research SDK and CLI for anonymous search, canonical references and educational calculators.",
   "type": "module",
   "homepage": "https://www.aguasto.com/developers",
-  "repository": { "type": "git", "url": "https://github.com/Altssdata/aguasto-agents.git", "directory": "javascript" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Altssdata/aguasto-agents.git",
+    "directory": "javascript"
+  },
   "author": "Aguasto",
   "license": "UNLICENSED",
-  "engines": { "node": ">=22" },
-  "exports": { ".": { "types": "./index.d.ts", "import": "./index.mjs" } },
-  "bin": { "aguasto-research": "./cli.mjs" },
-  "files": ["index.mjs", "index.d.ts", "cli.mjs", "fixtures.json", "README.md"]
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs"
+    }
+  },
+  "bin": {
+    "aguasto-research": "cli.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "cli.mjs",
+    "fixtures.json",
+    "README.md"
+  ]
 }
