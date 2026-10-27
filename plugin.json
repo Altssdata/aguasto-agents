@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aguasto-research",
+  "version": "1.0.0",
+  "description": "Public Aguasto research references and educational infrastructure calculations.",
+  "author": { "name": "Aguasto", "url": "https://www.aguasto.com" },
+  "homepage": "https://www.aguasto.com/developers",
+  "keywords": ["gpu", "research", "infrastructure", "calculators"]
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "aguasto-research": { "type": "streamable-http", "url": "https://www.aguasto.com/mcp/docs" },
+    "aguasto-calculators": { "type": "streamable-http", "url": "https://www.aguasto.com/mcp/tools" }
+  }
+}

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aguasto-research"
+version = "1.0.0"
+description = "Official Aguasto public research and educational calculator client, distributed as source"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Aguasto"}]
+classifiers = ["Private :: Do Not Upload"]
+
+[project.urls]
+Homepage = "https://www.aguasto.com/developers"
+Documentation = "https://www.aguasto.com/openapi.json"
+
+[project.scripts]
+aguasto-research = "aguasto_research.__main__:main"
+
+[tool.setuptools]
+packages = ["aguasto_research"]
+
+[tool.setuptools.package-data]
+aguasto_research = ["fixtures.json"]
