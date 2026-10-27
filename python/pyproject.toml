@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aguasto-research"
 version = "1.0.0"
-description = "Official Aguasto public research and educational calculator client, distributed as source"
+description = "Official Aguasto public research and educational calculator client"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name = "Aguasto"}]
-classifiers = ["Private :: Do Not Upload"]
+license = {text = "All rights reserved."}
 
 [project.urls]
 Homepage = "https://www.aguasto.com/developers"
