@@ -6,6 +6,17 @@ on:
 permissions:
   contents: read
 jobs:
+  python-distribution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install build twine
+      - run: python3 -m build python --outdir dist
+      - run: python3 -m twine check --strict dist/*
+      - run: python3 -m pip install --no-deps dist/*.whl
+      - run: aguasto-research fixtures
   clients:
     runs-on: ubuntu-latest
     steps:
